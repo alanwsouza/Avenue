@@ -1,13 +1,13 @@
 name: End-to-end tests
 on: push
-jobs:         
+jobs:                   
   cypress-run:
+    name: Cypress run
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout código-fonte
+      - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Configurar Cypress e executar testes
+      - name: Cypress run
         uses: cypress-io/github-action@v5
-        env:
-          CYPRESS_PACKAGE_VERSION: Avenue_Cypress/package-lock.json
+        with:
+          project: ./Avenue_Cypress/          
