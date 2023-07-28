@@ -5,15 +5,14 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3        
+      - name: Configurar Cypress e executar testes
+        env:
+          CYPRESS_PACKAGE_VERSION: /Avenue_Cypress/package-lock.json
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v5
-        with:
-         node-version: '^12.13.0'
-         cache: 'npm'
-         cache-dependency-path: /Avenue_Cypress/package-lock.json
         # after the test run completes store videos and any screenshots
       - uses: actions/upload-artifact@v3
       # add the line below to store screenshots only on failures
