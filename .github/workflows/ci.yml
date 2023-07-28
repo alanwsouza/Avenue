@@ -8,6 +8,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Configurar Cypress e executar testes
+        uses: cypress-io/github-action@v5
         env:
           CYPRESS_PACKAGE_VERSION: Avenue_Cypress/package-lock.json
-        uses: cypress-io/github-action@v5        
