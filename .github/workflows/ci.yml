@@ -9,7 +9,7 @@ jobs:
         with:
          node-version: '^12.13.0'
          cache: 'npm'
-         cache-dependency-path: subdir/package-lock.json
+         cache-dependency-path: \Avenue_Cypress\package-lock.json
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
