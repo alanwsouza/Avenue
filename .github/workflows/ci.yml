@@ -6,7 +6,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3        
-      - name: Configurar Cypress e executar testes
         env:
           CYPRESS_PACKAGE_VERSION: /Avenue_Cypress/package-lock.json
       # Install npm dependencies, cache them correctly
