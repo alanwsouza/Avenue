@@ -5,16 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout código-fonte
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Configurar Cypress e executar testes
         env:
           CYPRESS_PACKAGE_VERSION: Avenue_Cypress/package-lock.json
-        run: |
-          # Instala as dependências
-          npm ci
-          # Executa os testes
-          npx cypress run
-
-
-        
+        uses: cypress-io/github-action@v5        
