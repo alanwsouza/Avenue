@@ -11,4 +11,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          spec: Avenue_Cypress/cypress/e2e/amazon.cy.js
+         working-directory: Avenue_Cypress
+         
